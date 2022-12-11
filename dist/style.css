@@ -92,6 +92,23 @@ body {
     color: var(--black);
 }
 
+.button-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.button-container > input[type='button'] {
+    margin: 7px;
+    color: var(--brown);
+    background-color: transparent;
+    transition: 0.2s ease-in-out;
+}
+
+.button-container>input[type='button']:hover {
+    color: var(--light-beige);
+    background-color: var(--dark-beige);
+}
+
 input[type='button'] {
     border: none;
     border-radius: 7px;

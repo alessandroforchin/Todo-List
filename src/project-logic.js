@@ -52,4 +52,4 @@ function projectLogic() {
     })
 }
 
-export { projectLogic, Project }
+export { projectLogic }

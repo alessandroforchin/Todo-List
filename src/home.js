@@ -1,5 +1,7 @@
 import { content } from './index';
-import { taskLogic } from './task-logic';
+import { toDoRender } from './todo';
+import { projectRender } from './projects';
+
 
 function homeRender() {
     content.innerHTML = `
@@ -17,7 +19,11 @@ function homeRender() {
 
         <div class="menu-container" id='menu-container'>
             <h2>Inbox</h2>
-            
+
+            <div class='button-container'>
+                <input type='button' id='home-btn-task' value='+ add task'>
+                <input type='button' id='home-btn-project' value='+ add project'>
+            </div>
 
             <div class="task-container">
                 <div class="popup">
@@ -40,7 +46,13 @@ function homeRender() {
             <p>Copyright 2022 <span><i class="fa-solid fa-copyright"></i></span> <a href="https://github.com/alessandroforchin">alessandroforchin <span><i class="fa-brands fa-github"></i></span></a></p>
         </footer>`;
 
-    // taskLogic();
+    document.getElementById('home-btn-task').addEventListener('click', () => {
+        toDoRender();
+    })
+
+    document.getElementById('home-btn-project').addEventListener('click', () => {
+        projectRender();
+    })
     
 }
 

@@ -54,4 +54,4 @@ function taskLogic() {
     })
 }
 
-export { taskLogic, Task }
+export { taskLogic }
